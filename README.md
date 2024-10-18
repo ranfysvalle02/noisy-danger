@@ -8,6 +8,36 @@ __Image Credit to [Handling Noisy Data: Smoothing and Filtering Techniques](http
 
 Text analysis is a powerful tool, but noisy text – riddled with typos, slang, and inconsistencies – can throw a wrench in the works. This is especially true for Natural Language Processing (NLP) tasks like sentiment analysis or topic modeling. 
 
+Moreover, the complexity increases when malicious actors exploit these weaknesses through sophisticated techniques.
+
+### Prompt Injection Attacks
+
+**Prompt injection** is a method where attackers manipulate the input given to an LLM to produce unintended outputs. This technique involves disguising malicious instructions as benign user inputs, effectively tricking the model into executing harmful commands. For instance, if a user inputs a prompt that appears harmless but is crafted to override the model's intended behavior, the LLM may execute actions that it was designed to avoid.
+
+- **Example of Prompt Injection**: An attacker might input a command that instructs the LLM to ignore previous instructions and perform an action that could compromise security or privacy.
+
+The risk of prompt injection is particularly high in applications that concatenate trusted prompts with untrusted user inputs. This vulnerability allows attackers to manipulate how the model interprets and executes commands, leading to potential data breaches or misuse of sensitive functionalities.
+
+### Jailbreaking Techniques
+
+**Jailbreaking** refers to tactics used to bypass the safety filters embedded within LLMs. Unlike prompt injections, which focus on manipulating input, jailbreaking aims to convince the model that it can disregard its built-in safeguards entirely. This can be achieved through various methods:
+
+- **Human-Written Jailbreaks**: These are crafted prompts designed to make the LLM believe it has permission to act outside its constraints.
+- **Automated Jailbreaking Scripts**: These scripts attempt to brute-force the model into producing desired outputs by appending random characters or instructions.
+
+For example, a well-known jailbreak prompt known as **DAN (Do Anything Now)** creates an alter ego for the model, allowing it to bypass its alignment and restrictions. The effectiveness of such techniques highlights the ongoing arms race between developers implementing safeguards and attackers seeking ways to circumvent them.
+
+## Implications for NLP Applications
+
+The implications of these vulnerabilities are profound. In applications where LLMs have access to sensitive data—such as personal assistants or automated decision-making systems—the risks escalate dramatically. An attacker could potentially manipulate an LLM into executing harmful actions, such as sending confidential information to unauthorized recipients.
+
+### Mitigation Strategies
+
+To combat these threats, developers are exploring various strategies:
+
+- **Output Filtering**: Instead of solely focusing on preventing malicious prompts from reaching the model, some suggest filtering outputs for suspicious content post-processing. This approach allows for greater flexibility while maintaining security.
+- **Immutable System Prompts**: Creating prompts that cannot be altered by user inputs could help ensure that models adhere strictly to their intended functions without being influenced by external commands.
+
 ### Cleaning Up the Mess: Text Preprocessing
 
 Noisy text is like a messy room – it needs organization before you can find anything. The first step is text cleaning, which involves techniques like:

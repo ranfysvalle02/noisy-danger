@@ -11,7 +11,6 @@ Noisy text is like a messy room – it needs organization before you can find an
 * **Punctuation Removal:** Removing irrelevant symbols like commas and periods.
 * **Stopword Removal:** Eliminating common words like "the" and "a" that don't carry much meaning.
 * **Tokenization:** Breaking down the text into meaningful units like words or phrases.
-* **Handling Misspellings:** (Optional) Employing tools to correct typos and grammatical errors.
 
 Python's Natural Language Toolkit (NLTK) library provides tools for these tasks. Here's an example of cleaning a noisy sentence:
 

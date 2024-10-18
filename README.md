@@ -41,7 +41,8 @@ def clean_text(text):
 # Example noisy text
 text = "PyTorch Lightning is GREAT!! NLP is AMAZING!!!! #NLP #PyTorch @User"
 cleaned_text = clean_text(text)
-print(cleaned_text)
+print(cleaned_text) # ['pytorch', 'lightning', 'great', 'nlp', 'amazing', 'nlp', 'pytorch', 'user']
+
 ```
 
 ### **2. Text Vectorization**

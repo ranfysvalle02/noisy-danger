@@ -22,9 +22,41 @@ Python's Natural Language Toolkit (NLTK) library provides tools for these tasks.
 # After cleaning: ["pytorch", "lightning", "great", "nlp", "amazing", "nlp", "pytorch", "user"]
 ```
 
+
+Here’s an example of cleaning a noisy text using NLTK:
+
+```python
+import nltk
+from nltk.corpus import stopwords
+import string
+
+# Download stopwords if not available
+nltk.download('stopwords')
+stop_words = set(stopwords.words('english'))
+
+def clean_text(text):
+    # Lowercasing
+    text = text.lower()
+    
+    # Removing punctuation
+    text = text.translate(str.maketrans('', '', string.punctuation))
+    
+    # Tokenization and removing stopwords
+    tokens = nltk.word_tokenize(text)
+    tokens = [word for word in tokens if word not in stop_words]
+    
+    return tokens
+
+# Example noisy text
+text = "PyTorch Lightning is GREAT!! NLP is AMAZING!!!! #NLP #PyTorch @User"
+cleaned_text = clean_text(text)
+print(cleaned_text) # ['pytorch', 'lightning', 'great', 'nlp', 'amazing', 'nlp', 'pytorch', 'user']
+
+```
+
 ### From Text to Numbers: Text Vectorization
 
-Clean text is great, but deep learning models need numerical data to work their magic. This is where text vectorization comes in. Techniques like Bag-of-Words (BoW), TF-IDF, and word embeddings convert text into numerical representations.
+Clean text is great, but deep learning models need numerical data to work their magic. This is where text vectorization comes in. Techniques like [Bag-of-Words (BoW)](https://github.com/ranfysvalle02/just-a-bag-of-words), TF-IDF, and word embeddings convert text into numerical representations.
 
 ### Building the Model: Extracting Insights
 
@@ -33,7 +65,6 @@ Once your data is cleaned and vectorized, you can build your NLP model. PyTorch 
 * **Sentiment Analysis**: Classifying text as positive, negative, or neutral.
 * **Topic Modeling**: Identifying hidden thematic structures within a collection of documents.
 * **Text Classification**: Categorizing text into predefined classes like "sports" or "politics".
-
 
 Let's walk through a full demo using PyTorch Lightning that processes simple synthetic text data and builds an NLP model with word embeddings. This will focus on tokenization, creating word embeddings, and running a classifier to give you a solid understanding of how NLP models work at a fundamental level.
 

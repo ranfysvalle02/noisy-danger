@@ -70,7 +70,7 @@ Text vectorization is the process of converting text data into numerical represe
 
 * **Bag-of-Words (BoW):** This is a simple technique that represents each document as a bag (multiset) of its words, disregarding grammar and word order but keeping track of frequency. For example, the sentence "The cat sat on the mat" might be represented as `{"the": 2, "cat": 1, "sat": 1, "on": 1, "mat": 1}`.
 
-* **Word Embeddings:** This is a type of word representation that allows words with similar meanings to have similar representations. Techniques like Word2Vec or GloVe can generate these embeddings, which capture semantic relationships between words.
+* **Word Embeddings:** This is a type of word representation that allows words with similar meanings to have similar representations. Techniques like Word2Vec can generate these embeddings, which capture semantic relationships between words.
 
 Here's an example of how to create a BoW representation using Python's `CountVectorizer`:
 

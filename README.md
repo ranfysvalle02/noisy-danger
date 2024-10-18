@@ -58,6 +58,54 @@ print(cleaned_text) # ['pytorch', 'lightning', 'great', 'nlp', 'amazing', 'nlp',
 
 Clean text is great, but deep learning models need numerical data to work their magic. This is where text vectorization comes in. Techniques like [Bag-of-Words (BoW)](https://github.com/ranfysvalle02/just-a-bag-of-words), TF-IDF, and word embeddings convert text into numerical representations.
 
+### Understanding Text Vectorization Techniques
+
+Text vectorization is the process of converting text data into numerical representations that can be understood by machine learning models. Here are some common techniques:
+
+* **Bag-of-Words (BoW):** This is a simple technique that represents each document as a bag (multiset) of its words, disregarding grammar and word order but keeping track of frequency. For example, the sentence "The cat sat on the mat" might be represented as `{"the": 2, "cat": 1, "sat": 1, "on": 1, "mat": 1}`.
+
+* **Word Embeddings:** This is a type of word representation that allows words with similar meanings to have similar representations. Techniques like Word2Vec or GloVe can generate these embeddings, which capture semantic relationships between words.
+
+Here's an example of how to create a BoW representation using Python's `CountVectorizer`:
+
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+
+corpus = ['The cat sat on the mat.', 'The dog sat on the log.', 'Cats and dogs are great.']
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(corpus)
+
+print(vectorizer.get_feature_names_out())
+print(X.toarray())
+```
+
+### Advanced Techniques for Handling Noisy Text Data
+
+While the techniques above can handle a lot of NLP tasks, there are more advanced techniques that can be used for complex or noisy text data:
+
+* **Transformer Models (BERT, RoBERTa, etc.):** These models use transformer architectures, which rely on self-attention mechanisms. They have been pre-trained on large corpora and can generate context-aware word embeddings. For noisy text data, these models can capture the context of words and generate more accurate representations.
+
+* **Handling Out-of-Vocabulary Words:** Sometimes, you might encounter words that are not in your vocabulary, especially with noisy text data. Techniques to handle this include using a special "unknown" token to represent all unknown words, or using subword tokenization techniques (like Byte Pair Encoding) that can represent unknown words based on known subwords.
+
+Here's an example of how to use the BERT model for text classification using the `transformers` library:
+
+```python
+from transformers import BertTokenizer, BertForSequenceClassification
+import torch
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+model = BertForSequenceClassification.from_pretrained('bert-base-uncased')
+
+inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
+labels = torch.tensor([1]).unsqueeze(0)  # Batch size 1, label 1
+
+outputs = model(**inputs, labels=labels)
+loss = outputs.loss
+logits = outputs.logits
+```
+
+Remember, these advanced techniques might be more computationally intensive and could require more time to train. However, they can often provide better performance, especially on complex or noisy text data.
+
 ### Building the Model: Extracting Insights
 
 Once your data is cleaned and vectorized, you can build your NLP model. PyTorch Lightning provides a structured framework to handle the deep learning pipeline, allowing you to focus on the modeling aspect rather than boilerplate code. Common NLP tasks include:

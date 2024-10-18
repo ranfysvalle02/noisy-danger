@@ -62,7 +62,7 @@ print(cleaned_text) # ['pytorch', 'lightning', 'great', 'nlp', 'amazing', 'nlp',
 
 ### From Text to Numbers: Text Vectorization
 
-Clean text is great, but deep learning models need numerical data to work their magic. This is where text vectorization comes in. Techniques like [Bag-of-Words (BoW)](https://github.com/ranfysvalle02/just-a-bag-of-words), TF-IDF, and word embeddings convert text into numerical representations.
+Clean text is great, but deep learning models need numerical data to work their magic. This is where text vectorization comes in. Techniques like [Bag-of-Words (BoW)](https://github.com/ranfysvalle02/just-a-bag-of-words), and word embeddings convert text into numerical representations.
 
 ### Understanding Text Vectorization Techniques
 

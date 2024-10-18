@@ -126,6 +126,10 @@ Remember, these advanced techniques might be more computationally intensive and 
 
 ### Building the Model: Extracting Insights
 
+![](https://nexocode.com/cdn-cgi/image/width=600,quality=75/images/NLP-tasks.webp)
+
+__Image Credit to [Leveraging Natural Language Processing (NLP) for Healthcare and Pharmaceutical Companies](https://nexocode.com/blog/posts/natural-language-processing-healthcare/)__
+
 Once your data is cleaned and vectorized, you can build your NLP model. PyTorch Lightning provides a structured framework to handle the deep learning pipeline, allowing you to focus on the modeling aspect rather than boilerplate code. Common NLP tasks include:
 
 * **Sentiment Analysis**: Classifying text as positive, negative, or neutral.

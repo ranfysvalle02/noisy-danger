@@ -191,6 +191,29 @@ with torch.no_grad():
 
 This will output the training progress and finally make a prediction for the test sentence. The demo focuses on simple word embeddings and shows how PyTorch handles NLP tasks without relying on external heavy models or pre-trained embeddings.
 
+#### OUTPUT
+```
+Training started...
+
+  | Name      | Type              | Params | Mode 
+--------------------------------------------------------
+0 | embedding | Embedding         | 40     | train
+1 | fc        | Linear            | 11     | train
+2 | loss      | BCEWithLogitsLoss | 0      | train
+--------------------------------------------------------
+51        Trainable params
+0         Non-trainable params
+51        Total params
+0.000     Total estimated model params size (MB)
+3         Modules in train mode
+0         Modules in eval mode
+/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:424: The 'train_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=9` in the `DataLoader` to improve performance.
+Epoch 9: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 299.21it/s, v_num=38]`Trainer.fit` stopped: `max_epochs=10` reached.
+Epoch 9: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 202.12it/s, v_num=38]
+Training completed!
+Test Prediction for 'hello world': 0.6120739579200745
+```
+
 ### Conquering the Noise: Challenges and Solutions
 
 Noisy text throws some curveballs that need to be addressed:

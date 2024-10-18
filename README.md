@@ -48,15 +48,6 @@ def clean_text(text):
 text = "PyTorch Lightning is GREAT!! NLP is AMAZING!!!! #NLP #PyTorch @User"
 cleaned_text = clean_text(text)
 print(cleaned_text) # ['pytorch', 'lightning', 'great', 'nlp', 'amazing', 'nlp', 'pytorch', 'user']
-
-"""
-['and' 'are' 'cat' 'cats' 'dog' 'dogs' 'great' 'log' 'mat' 'on' 'sat'
- 'the']
-[[0 0 1 0 0 0 0 0 1 1 1 2]
- [0 0 0 0 1 0 0 1 0 1 1 2]
- [1 1 0 1 0 1 1 0 0 0 0 0]]
-"""
-
 ```
 
 ### From Text to Numbers: Text Vectorization
@@ -82,6 +73,14 @@ X = vectorizer.fit_transform(corpus)
 
 print(vectorizer.get_feature_names_out())
 print(X.toarray())
+
+"""
+['and' 'are' 'cat' 'cats' 'dog' 'dogs' 'great' 'log' 'mat' 'on' 'sat'
+ 'the']
+[[0 0 1 0 0 0 0 0 1 1 1 2]
+ [0 0 0 0 1 0 0 1 0 1 1 2]
+ [1 1 0 1 0 1 1 0 0 0 0 0]]
+"""
 ```
 
 ### Advanced Techniques for Handling Noisy Text Data

@@ -87,7 +87,7 @@ print(X.toarray())
 
 While the techniques above can handle a lot of NLP tasks, there are more advanced techniques that can be used for complex or noisy text data:
 
-* **Transformer Models (BERT, RoBERTa, etc.):** These models use transformer architectures, which rely on self-attention mechanisms. They have been pre-trained on large corpora and can generate context-aware word embeddings. For noisy text data, these models can capture the context of words and generate more accurate representations.
+* **Transformer Models (BERT, RoBERTa, etc.):** These models use transformer architectures, which rely on [self-attention mechanisms](https://github.com/ranfysvalle02/ai-self-attention/). They have been pre-trained on large corpora and can generate context-aware word embeddings. For noisy text data, these models can capture the context of words and generate more accurate representations.
 
 * **Handling Out-of-Vocabulary Words:** Sometimes, you might encounter words that are not in your vocabulary, especially with noisy text data. Techniques to handle this include using a special "unknown" token to represent all unknown words, or using subword tokenization techniques (like Byte Pair Encoding) that can represent unknown words based on known subwords.
 

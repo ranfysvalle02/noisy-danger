@@ -1,5 +1,5 @@
 # noisy-text
-## Taming the Text Storm: How PyTorch Lightning Tackles Noisy NLP Data
+## From Noise to Knowledge: Tackling Noisy NLP Data
 
 Text analysis is a powerful tool, but noisy text – riddled with typos, slang, and inconsistencies – can throw a wrench in the works. This is especially true for Natural Language Processing (NLP) tasks like sentiment analysis or topic modeling. 
 

@@ -3,8 +3,6 @@
 
 Text analysis is a powerful tool, but noisy text – riddled with typos, slang, and inconsistencies – can throw a wrench in the works. This is especially true for Natural Language Processing (NLP) tasks like sentiment analysis or topic modeling. 
 
-Fear not, NLP warriors! PyTorch Lightning swoops in to streamline the process of cleaning, processing, and ultimately extracting insights from noisy text data. Here, we'll delve into the steps involved and showcase the power of PyTorch Lightning with a practical example.
-
 ### Cleaning Up the Mess: Text Preprocessing
 
 Noisy text is like a messy room – it needs organization before you can find anything. The first step is text cleaning, which involves techniques like:

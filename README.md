@@ -243,21 +243,18 @@ with torch.no_grad():
    - After training, we test the model with the sentence `"hello world"`, showing the predicted output using `torch.sigmoid` to get a probability.
 
 ### Running the Demo
-
-1. Save the code in a file called `demo.py`.
-2. Install necessary packages:
+1. Install necessary packages:
 
    ```bash
    pip install torch pytorch-lightning
    ```
 
-3. Run the demo:
+2. Run the demo:
 
    ```bash
    python demo.py
    ```
 
-This will output the training progress and finally make a prediction for the test sentence. The demo focuses on simple word embeddings and shows how PyTorch handles NLP tasks without relying on external heavy models or pre-trained embeddings.
 
 #### OUTPUT
 ```

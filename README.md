@@ -1,4 +1,9 @@
 # noisy-text
+
+![](https://mars-images.imgix.net/seobot/dataheadhunters.com/65d3fe4cbb7642d3cbdb5203-abc2fc3fac35580a6b7b95994eaf764c.png?auto=compress)
+
+__Image Credit to [Handling Noisy Data: Smoothing and Filtering Techniques](https://dataheadhunters.com/academy/handling-noisy-data-smoothing-and-filtering-techniques/)__
+
 ## From Noise to Knowledge
 
 Text analysis is a powerful tool, but noisy text – riddled with typos, slang, and inconsistencies – can throw a wrench in the works. This is especially true for Natural Language Processing (NLP) tasks like sentiment analysis or topic modeling. 

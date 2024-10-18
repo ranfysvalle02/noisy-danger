@@ -12,7 +12,7 @@ Moreover, the complexity increases when malicious actors exploit these weaknesse
 
 ### Prompt Injection Attacks
 
-**Prompt injection** is a method where attackers manipulate the input given to an LLM to produce unintended outputs. This technique involves disguising malicious instructions as benign user inputs, effectively tricking the model into executing harmful commands. For instance, if a user inputs a prompt that appears harmless but is crafted to override the model's intended behavior, the LLM may execute actions that it was designed to avoid.
+**[Prompt injection](https://github.com/ranfysvalle02/prompt-injection-demo/)** is a method where attackers manipulate the input given to an LLM to produce unintended outputs. This technique involves disguising malicious instructions as benign user inputs, effectively tricking the model into executing harmful commands. For instance, if a user inputs a prompt that appears harmless but is crafted to override the model's intended behavior, the LLM may execute actions that it was designed to avoid.
 
 - **Example of Prompt Injection**: An attacker might input a command that instructs the LLM to ignore previous instructions and perform an action that could compromise security or privacy.
 

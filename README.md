@@ -27,10 +27,6 @@ The risk of prompt injection is particularly high in applications that concatena
 
 For example, a well-known jailbreak prompt known as **DAN (Do Anything Now)** creates an alter ego for the model, allowing it to bypass its alignment and restrictions. The effectiveness of such techniques highlights the ongoing arms race between developers implementing safeguards and attackers seeking ways to circumvent them.
 
-## Implications for NLP Applications
-
-The implications of these vulnerabilities are profound. In applications where LLMs have access to sensitive data—such as personal assistants or automated decision-making systems—the risks escalate dramatically. An attacker could potentially manipulate an LLM into executing harmful actions, such as sending confidential information to unauthorized recipients.
-
 ### Mitigation Strategies
 
 To combat these threats, developers are exploring various strategies:

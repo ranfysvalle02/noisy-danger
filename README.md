@@ -91,23 +91,6 @@ While the techniques above can handle a lot of NLP tasks, there are more advance
 
 * **Handling Out-of-Vocabulary Words:** Sometimes, you might encounter words that are not in your vocabulary, especially with noisy text data. Techniques to handle this include using a special "unknown" token to represent all unknown words, or using subword tokenization techniques (like Byte Pair Encoding) that can represent unknown words based on known subwords.
 
-Here's an example of how to use the BERT model for text classification using the `transformers` library:
-
-```python
-from transformers import BertTokenizer, BertForSequenceClassification
-import torch
-
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = BertForSequenceClassification.from_pretrained('bert-base-uncased')
-
-inputs = tokenizer("Hello, my dog is cute", return_tensors="pt")
-labels = torch.tensor([1]).unsqueeze(0)  # Batch size 1, label 1
-
-outputs = model(**inputs, labels=labels)
-loss = outputs.loss
-logits = outputs.logits
-```
-
 Remember, these advanced techniques might be more computationally intensive and could require more time to train. However, they can often provide better performance, especially on complex or noisy text data.
 
 ### Building the Model: Extracting Insights
